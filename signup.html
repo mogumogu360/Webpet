@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Pet Health Tracker</title>
+   <!--- <link rel="stylesheet" href="css/style.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #bcccdd; /* Dark Blue-Gray */
+            color: #9ebfc7; /* Light Gray Text */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: #bcccdd; /* Dark Blue-Gray */
+        }
+
+        .navbar-brand, .nav-link {
+            color: #0b4d5e !important; /* Light Gray Text */
+        }
+
+        .navbar-brand:hover, .nav-link:hover {
+            color: #f39c12 !important; /* Gold hover */
+        }
+
+        /* Sign-Up Form Card Styling */
+        .form-card {
+            background-color: #406181; /* Dark Gray-Blue */
+            border: 1px solid #476a8d; /* Very Dark Navy */
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-control {
+            background-color: #c6d2df; /* Dark Blue-Gray */
+            border: 1px solid #57799b; /* Dark Gray-Blue */
+            color: #6e8085; /* Light Gray Text */
+        }
+
+        .btn-primary {
+            background-color: #e74c3c; /* Vivid Red */
+            border-color: #e74c3c;
+        }
+
+        .btn-primary:hover {
+            background-color: #c0392b; /* Darker Red */
+            border-color: #c0392b;
+        }
+
+        /* Footer Styling */
+        footer {
+    margin-top: auto; /* Push footer to the bottom */
+    width: 100%;
+    padding: 10px 0; /* Thinner footer */
+    font-size: 14px; /* Reduce font size for a compact look */
+    background-color: #343a40; /* Darker background for the footer */
+    color: white; /* White text for footer */
+    text-align: center; /* Center text in footer */
+}
+
+footer ul {
+    padding-left: 0;
+    margin: 0; /* Remove default margin for list */
+    list-style: none; /* Remove bullet points */
+}
+
+footer li {
+    display: inline; /* Display items in a single line */
+    margin: 0 10px; /* Add space between items */
+}
+
+footer a {
+    text-decoration: none;
+    color: white; /* Ensure links are clearly visible */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline on hover for better UX */
+}
+        
+        /* Success message styling */
+.alert-success {
+           
+    display: none; /* Initially hidden */
+ }
+
+    </style>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+    <div class="container">
+        <div class="logo"><a href="index.html"><img src="img/Healthy Paws.png" width="100" height="100" alt="Healthy Paws logo"></a></div>
+
+        <a class="navbar-brand" href="index.html">Pet Health Tracker</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="signup.html">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Sign Up Form -->
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card form-card">
+                <div class="card-body">
+                    <h3 class="text-center" style="color:#9ebfc7;">Create Your Account</h3>
+
+                    <!-- Success message -->
+                    <div id="success-message" class="alert alert-success text-center" role="alert">
+                        Sign up successful! Redirecting to login page...
+                    </div>
+
+                    <form id="signupForm" class="mt-4">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirm_password" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirm_password" placeholder="Confirm your password" required>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary">Sign Up</button>
+                        </div>
+                    </form>
+                    <p class="text-center mt-3">Already have an account? <a href="login.html" class="text-primary">Login here</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer mt-5">
+    <div class="container">
+        <p class="text-center text-light">&copy; 2024 Pet Health Tracker. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JavaScript to handle signup and localStorage -->
+<script src="js/signup.js"></script>
+</body>
+</html>

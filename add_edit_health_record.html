@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add/Edit Health Record</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    
+    /* General Body Styles */
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #bcccdd; /* Dark Blue-Gray */
+        color: #0b4d5e; /* Light Gray Text */
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Full-height wrapper to push the footer down */
+    .wrapper {
+        flex: 1;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+        background-color: #bcccdd; 
+    }
+
+    .navbar-brand, .nav-link {
+        color: #0b4d5e !important; /* Light Gray Text */
+    }
+
+    .navbar-brand:hover, .nav-link:hover {
+        color: #f39c12 !important; /* Gold hover */
+    }
+
+    .navbar .user-name {
+        color: #f39c12;
+        margin-right: 20px;
+    }
+
+    /* Pets Section Styling */
+    .pets-section {
+        background-color: #bcccdd; /* Dark Gray-Blue */
+        padding: 40px 0;
+    }
+
+    .pets-section h1 {
+        color: #e74c3c; /* Vivid Red */
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .pet-card {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        margin-bottom: 20px;
+    }
+
+    .pet-card-body {
+        padding: 20px;
+    }
+
+    .btn-primary {
+        background-color: #e74c3c; /* Vivid Red */
+        border-color: #e74c3c;
+    }
+    .edit-pet-btn
+    {
+        background-color: #e74c3c; /* Vivid Red */
+        border-color: #e74c3c;
+        color: white; 
+    }
+    .delete-pet-btn
+    {
+        background-color: #e74c3c; /* Vivid Red */
+        border-color: #e74c3c;
+    }
+    .edit-pet-btn:hover
+    {
+        background-color: #c0392b; /* Darker Red */
+        border-color: #c0392b;
+        color: white; 
+    }
+    .delete-pet-btn:hover
+    { 
+        background-color: #c0392b; /* Darker Red */
+        border-color: #c0392b;
+    }
+    
+
+    .btn-primary:hover {
+        background-color: #c0392b; /* Darker Red */
+        border-color: #c0392b;
+    }
+
+    .btn-warning {
+        margin-right: 10px;
+    }
+
+    /* Footer Styling */
+    footer {
+        background-color: #212e3a; /* Very Dark Navy */
+        color: #7f9ca3;
+        padding: 20px 0;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+    /* Make footer sticky to the bottom */
+    .footer {
+        position: relative;
+        bottom: 0;
+          }
+</style>
+</head>
+<body>
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <div class="logo"><a href="index.html"><img src="img/Healthy Paws.png" width="100" height="100" alt="Healthy Paws logo"></a></div>
+
+        <a class="navbar-brand" href="index.html">Pet Health Tracker</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <span class="nav-link user-name" id="userNameDisplay"></span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pets.html">Pet Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="logout.html" id="logoutBtn">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="container mt-5">
+        <h1 id="formTitle">Add New Health Record</h1>
+        <form id="healthRecordForm">
+            <div class="mb-3">
+                <label for="medicalHistory" class="form-label">Medical History</label>
+                <textarea class="form-control" id="medicalHistory" rows="4"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="vaccinationRecords" class="form-label">Vaccination Records</label>
+                <textarea class="form-control" id="vaccinationRecords" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Save Record</button>
+        </form>
+    </div>
+
+    
+    <!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p class="text-center">&copy; 2024 Pet Health Tracker. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/add_edit_health_record.js"></script>
+
+</body>
+</html>
